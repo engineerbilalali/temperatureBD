@@ -1,6 +1,6 @@
 // models/temperature.js
 
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const temperatureSchema = new mongoose.Schema({
   value: {
@@ -13,5 +13,5 @@ const temperatureSchema = new mongoose.Schema({
   }
 });
 
-const Temperature = mongoose.models.Temperature || mongoose.model('Temperature', temperatureSchema);
-export default Temperature;
+const Temperature = mongoose.model('Temperature', temperatureSchema);
+module.exports = Temperature;
